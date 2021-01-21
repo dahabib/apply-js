@@ -27,6 +27,7 @@ function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
     } else {
         var costPhone = phoneUnitPrice * phoneQuantity;
     }
+
     if (laptopQuantity < 0) {
         console.log('Laptop quantity should be a positive value');
     } else {
@@ -40,11 +41,43 @@ function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
 // 3rd Assignment : hotelCost
 
 function hotelCost(day) {
+    var cost = 0;
     if (day < 0) {
-        console.log('How much days you want to stay ');
+        console.log('Enter valueof day in positive value.');
     } else {
-        var costPhone = phoneUnitPrice * phoneQuantity;
-    }
+        var packageOne = 100;
+        var packageTwo = 80;
+        var packageThree = 50;
 
+        if (day <= 10) {
+            cost = day * packageOne;
+        } else if (day <= 20) {
+            var packageOneCost = 1000;
+            var remaingDays = day - 10;
+            var packageTwoCost = remaingDays * packageTwo;
+            cost = packageOneCost + packageTwoCost;
+        } else {
+            var packageOneCost = 1000;
+            var packageTwoCost = 800;
+            var remaingDays = day - 20;
+            var packageThreeCost = remaingDays * packageThree;
+            cost = packageOneCost + packageTwoCost + packageThreeCost;
+        }
+    }
     return cost;
+}
+
+// 4th Assignment : megaFriend
+
+function megaFriend(friends) {
+    var length = 0;
+    var biggestName;
+
+    for (var i = 0; i < friends.length; i++) {
+        if (friends[i].length > length) {
+            var length = friends[i].length;
+            biggestName = friends[i];
+        }
+    }
+    return biggestName;
 }
