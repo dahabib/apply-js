@@ -19,7 +19,7 @@ function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
     if (clockQuantity < 0) {
         console.log('Clock quantity should be a positive value');
     } else {
-        var costPrice = clockUnitPrice * clockQuantity;
+        var costClock = clockUnitPrice * clockQuantity;
     }
 
     if (phoneQuantity < 0) {
@@ -33,7 +33,7 @@ function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
         var costLaptop = laptopUnitPrice * laptopQuantity;
     }
 
-    var totalCost = costPrice + costPhone + costLaptop;
+    var totalCost = costClock + costPhone + costLaptop;
     return totalCost;
 }
 
