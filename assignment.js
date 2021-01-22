@@ -1,35 +1,34 @@
-// 1st Assignment : kilometerToMeter
-
-function kilometerToMeter(n) {
-    if (n < 0) {
-        console.log('KM should be a positive value');
+// 1st Problem : kilometerToMeter
+function kilometerToMeter(km) {
+    if (isNaN(km) || km < 0) {
+        console.log('Enter a value, in positive.');
     } else {
-        var meter = n * 1000;
-        return meter;
+        var meter = km * 1000;
     }
+    return meter;
 }
 
-// 2nd Assignment : budgetCalculator
+// 2nd Problem : budgetCalculator
 
 function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
     var clockUnitPrice = 50;
     var phoneUnitPrice = 100;
     var laptopUnitPrice = 500;
 
-    if (clockQuantity < 0) {
-        console.log('Clock quantity should be a positive value');
+    if (isNaN(clockQuantity) || clockQuantity < 0) {
+        console.log('Clock quantity should have a value, in positive.');
     } else {
         var costClock = clockUnitPrice * clockQuantity;
     }
-    
-    if (phoneQuantity < 0) {
-        console.log('Phone quantity should be a positive value');
+
+    if (isNaN(phoneQuantity) || phoneQuantity < 0) {
+        console.log('Phone quantity should have a value, in positive.');
     } else {
         var costPhone = phoneUnitPrice * phoneQuantity;
     }
 
-    if (laptopQuantity < 0) {
-        console.log('Laptop quantity should be a positive value');
+    if (isNaN(laptopQuantity) || laptopQuantity < 0) {
+        console.log('Laptop quantity should have a value, in positive.');
     } else {
         var costLaptop = laptopUnitPrice * laptopQuantity;
     }
@@ -38,11 +37,11 @@ function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
     return totalCost;
 }
 
-// 3rd Assignment : hotelCost
+// 3rd Problem : hotelCost
 
 function hotelCost(day) {
-    if (day < 0) {
-        console.log('Enter a positive value of Day.');
+    if (isNaN(day) || day < 0) {
+        console.log('Enter day, in positive value.');
     } else {
         var packageOne = 100;
         var packageTwo = 80;
@@ -66,7 +65,7 @@ function hotelCost(day) {
     return cost;
 }
 
-// 4th Assignment : megaFriend
+// 4th Problem : megaFriend
 
 function megaFriend(friends) {
 
