@@ -2,7 +2,7 @@
 
 function kilometerToMeter(n) {
     if (n < 0) {
-        console.log('Please enter a positive value');
+        console.log('KM should be a positive value');
     } else {
         var meter = n * 1000;
         return meter;
@@ -21,7 +21,7 @@ function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
     } else {
         var costClock = clockUnitPrice * clockQuantity;
     }
-
+    
     if (phoneQuantity < 0) {
         console.log('Phone quantity should be a positive value');
     } else {
@@ -41,9 +41,8 @@ function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
 // 3rd Assignment : hotelCost
 
 function hotelCost(day) {
-    var cost = 0;
     if (day < 0) {
-        console.log('Enter valueof day in positive value.');
+        console.log('Enter a positive value of Day.');
     } else {
         var packageOne = 100;
         var packageTwo = 80;
@@ -70,14 +69,16 @@ function hotelCost(day) {
 // 4th Assignment : megaFriend
 
 function megaFriend(friends) {
-    var length = 0;
-    var biggestName;
 
-    for (var i = 0; i < friends.length; i++) {
-        if (friends[i].length > length) {
-            var length = friends[i].length;
+    var length = 0;
+
+    if (friends.length > length) {
+        for (var i = 0; i < friends.length; i++) {
+            length = friends[i].length;
             biggestName = friends[i];
         }
+        return biggestName;
+    } else {
+        console.log('It looks like You have no friends.');
     }
-    return biggestName;
 }
