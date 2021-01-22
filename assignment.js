@@ -78,6 +78,6 @@ function megaFriend(friends) {
         }
         return biggestName;
     } else {
-        console.log('It looks like You have no friends.');
+        return 'It looks like You have no friends.';
     }
 }
